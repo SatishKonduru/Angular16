@@ -7,13 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PBindingComponent } from './components/p-binding/p-binding.component';
+import { CBindingComponent } from './components/c-binding/c-binding.component';
+import { SBindingComponent } from './components/s-binding/s-binding.component';
+import { EBindingComponent } from './components/e-binding/e-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InterpolationComponent,
-    PBindingComponent
+    PBindingComponent,
+    CBindingComponent,
+    SBindingComponent,
+    EBindingComponent
   ],
   imports: [
     BrowserModule,

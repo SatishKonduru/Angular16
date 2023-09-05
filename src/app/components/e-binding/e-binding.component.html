@@ -1,0 +1,17 @@
+<h1><u>Event Binding:</u></h1>
+
+<button class="btn btn-info" (click)="onClick()">Click Me</button>
+<button class="btn btn-success" (dblclick)="onDblClick()">Double Click Me</button>
+<button class="btn btn-danger" (mouseover)="onOver()">Mouse Over</button>
+<button class="btn btn-dark" (mouseout)="onOut()">Mouse Out</button>
+<button class="btn btn-primary" (mousemove)="onMove()">Mouse Move</button>
+<hr>
+<input type="text" value="key down" (keydown)="kDown()">
+<input type="text" value="key UP" (keyup)="kUp()">
+<input type="text" value="key Press" (keypress)="kPress()">
+<hr>
+<!-- <input type="text" (focus)="onFocus()"> -->
+<input type="text" (focusin)="onFocus()">
+<!-- <input type="text" (focusout)="onFocusLost()"> -->
+<input type="text" (blur)="onFocusLost()">
+<input type="text" (input)="onInput()">

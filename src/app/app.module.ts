@@ -10,7 +10,9 @@ import { PBindingComponent } from './components/p-binding/p-binding.component';
 import { CBindingComponent } from './components/c-binding/c-binding.component';
 import { SBindingComponent } from './components/s-binding/s-binding.component';
 import { EBindingComponent } from './components/e-binding/e-binding.component';
-
+import { TwoWayComponent } from './components/two-way/two-way.component';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +21,15 @@ import { EBindingComponent } from './components/e-binding/e-binding.component';
     PBindingComponent,
     CBindingComponent,
     SBindingComponent,
-    EBindingComponent
+    EBindingComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

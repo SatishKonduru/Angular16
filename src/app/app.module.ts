@@ -13,6 +13,7 @@ import { EBindingComponent } from './components/e-binding/e-binding.component';
 import { TwoWayComponent } from './components/two-way/two-way.component';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import {FormsModule} from '@angular/forms';
+import { IfComponent } from './components/if/if.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import {FormsModule} from '@angular/forms';
     CBindingComponent,
     SBindingComponent,
     EBindingComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    IfComponent
   ],
   imports: [
     BrowserModule,

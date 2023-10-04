@@ -28,4 +28,8 @@ goNext(){
   this._router.navigate(['/selectedItem', currentID]) 
 }
 
+goBack(){
+  this._router.navigate(['/courseDetails', {id: this.courseId }])
+}
+
 }

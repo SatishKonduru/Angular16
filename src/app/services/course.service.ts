@@ -1,17 +1,20 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
+  private _url = '../../assets/data/courseData.json'
+  getCourseInfo(): Observable<any>{
+    return  this._http.get<any>(this._url)
+    .pipe(catchError(this.incomingError))
+  }
 
-  getCourseInfo(){
-    return [
-      {id: 1, name: 'Angular', fee: 15000},
-      {id: 2, name: 'Angular Material', fee: 10000},
-      {id: 3, name: 'Bootstrap', fee: 5000}
-    ]
+  incomingError(err: HttpErrorResponse){
+    return throwError(err.message)
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
@@ -8,7 +9,15 @@ import { CourseService } from 'src/app/services/course.service';
 })
 export class CourseDetailsComponent {
   public course = []
-  constructor(private _courseService: CourseService){
-    this.course = _courseService.getCourseInfo()
+  public errMsg = ''
+  constructor(private _courseService: CourseService, private _router: Router){
+   this._courseService.getCourseInfo()
+   .subscribe(res => this.course = res ,
+              err => this.errMsg = err)
   }
+
+  onSelect(x){
+    this._router.navigate(['/selectedItem', x.id])
+  }
+  
 }

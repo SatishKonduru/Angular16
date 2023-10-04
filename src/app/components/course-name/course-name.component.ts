@@ -8,8 +8,11 @@ import { CourseService } from 'src/app/services/course.service';
 })
 export class CourseNameComponent {
   public course = [];
+  public errMsg = ''
   constructor(private _courseService : CourseService ){
-    this.course = _courseService.getCourseInfo()
+    this._courseService.getCourseInfo()
+    .subscribe(res => this.course = res ,
+                err => this.errMsg = err)
 
   }
  
